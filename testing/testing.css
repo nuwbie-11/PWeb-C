@@ -1,0 +1,485 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  
+  }
+  nav{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background:#6FAB56;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px 0 100px;
+    flex-wrap: wrap;
+    position: fixed;
+  }
+  nav .logo{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+  }
+  
+  .logo a{
+    color: rgb(255, 255, 255)
+  }
+  nav ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+  nav ul li{
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+
+  .log{
+    border: whitesmoke solid 3px;
+    border-radius: 5px;
+    background-color: transparent;
+    box-shadow: 0px 1px 3px whitesmoke;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    color: #111;
+    background: #fff;
+  }
+  nav .menu-btn i{
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+  }
+  input[type="checkbox"]{
+    display: none;
+  }
+  @media (max-width: 1280px){
+    .kontainer, .kontainer2{
+      padding: 0 250px 0 0px;
+    }
+  }
+  @media (max-width: 1000px){
+    nav{
+      padding: 0 40px 0 50px;
+    }
+    .kontainer, .kontainer2{
+      padding: 0px 100px 100px 0px;
+      height:50%;
+    }
+  }
+  @media (max-width: 920px) {
+    nav .menu-btn i{
+      display: block;
+    }
+    #check:checked ~ .menu-btn i:before{
+      content: "\f00d";
+    }
+    .kontainer .kontak_isi, .kontainer2 .kontak_isi{
+      margin: 0px 0px;
+      text-align: center;
+      top:50px;
+    }
+    .kontainer, .kontainer2{
+      position:inherit;
+    }
+    nav ul{
+      position: absolute;
+      top: 80px;
+      left: -100%;
+      background: #111;
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      display: block;
+      transition: all 0.3s ease;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+    nav ul li{
+      width: 100%;
+      margin: 40px 0;
+    }
+    nav ul li a{
+      width: 100%;
+      margin-left: -100%;
+      display: block;
+      font-size: 20px;
+      transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    nav ul li .log{
+      display: flex;
+      width: 50%;
+      justify-content: center;
+    }
+    #check:checked ~ ul li a{
+      margin-left: 0px;
+    }
+
+    #check:checked ~ ul li .log{
+      margin-left: 25%;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover{
+      background: none;
+      color: cyan;
+    }
+    .beranda_container .image{
+      display:none ;
+    }
+    .beranda_container .cr{
+      padding-top: 10% ;
+    }
+    
+  }
+  
+  .smooth{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    scroll-snap-type:mandatory;
+    scroll-snap-points-y:repeat(100vh);
+    scroll-snap-type:y mandatory
+  }
+  
+  
+  .beranda_container{
+    background: url('img\ test/frame.png') fixed;
+    padding-top: 8%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-attachment:scroll;
+    display: flex;
+  }
+  .beranda_container .beran-detail {
+    width: 100%;
+    padding-left: 7%;
+    padding-top: 8%;
+    text-align: left;
+  }
+
+  .beranda_container .image{
+      align-items: flex-end;
+      justify-content: flex-end;
+  }
+
+  .beranda_container .cr{
+    display: flex;
+    margin-bottom:-2%;
+  }
+  .beranda_container .circles{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    background-color: #6FAB56;
+    margin-bottom: -10%;
+    margin-right: 5%;
+
+}
+  .beranda_container .beran-detail .beran-detail-heading {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: black;
+      padding-top: 100px
+  }
+  .beranda_container .beran-detail .beran-detail-subheading {
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      letter-spacing: .1rem;
+      color: black;
+      font-weight: 200;
+    }
+  .beranda_container .beran-detail .inf{
+      color: black;
+      font-size: 1rem;
+      padding-top: 15px ;
+      padding-right: 50%;
+  }
+  .beranda_container .beran-detail .beran-detail-button {
+      
+      margin-top: 20px;
+      padding: 20px 25px;
+      display: inline-block;
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: white;
+      text-decoration: none;
+      letter-spacing: .2rem;
+      background-color: #6FAB56;
+      border-radius: 15px;
+
+  }
+  /**
+  .beranda_container .beranda-img{
+      height: 40%;
+      width: 100%;
+      margin-bottom: 0.1rem;
+  
+  }
+  --*/
+  
+  .tentang_container{
+    background: url('mulungin/Johny.jpg') fixed;
+    padding-top: 10%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-attachment:scroll;
+  
+  }
+  
+  .tentang_container .tentang-detail {
+    width: 100%;
+    padding-top: 8%;
+      text-align: center;
+  }
+  .tentang_container .tentang-detail .tentang-detail-heading {
+      font-size: 5rem;
+      font-weight: 500;
+      color: whitesmoke;
+  }
+  .tentang_container .tentang-detail .tentang-detail-subheading {
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      letter-spacing: .5rem;
+      color: whitesmoke;
+  }
+  .tentang_container .tentang-detail .tentang-detail-button {
+      margin-top: 30px;
+      padding: 2rem 5rem;
+      display: inline-block;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      color: white;
+      text-decoration: none;
+      letter-spacing: .6rem;
+      background-color: rgba(85, 85, 85, 0.534);
+  }
+  .tentang_container .tentang-img {
+      height: 40%;
+      width: 100%;
+      margin-bottom: 0.3rem;
+  
+  }
+  
+  
+  
+    /*----*/
+  
+    .layanan_container{
+      background: url('mulungin/Arno.jpg') fixed;
+      padding-top: 10%;
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+      background-attachment:scroll;
+  
+    }
+  
+    .layanan_container .layanan-detail {
+      width: 100%;
+      padding-top: 8%;
+        text-align: center;
+    }
+    .layanan_container .layanan-detail .layanan-detail-heading {
+        font-size: 5rem;
+        font-weight: 500;
+        color: whitesmoke;
+    }
+    .layanan_container .layanan-detail .layanan-detail-subheading {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+        color: whitesmoke;
+    }
+    .layanan_container .layanan-detail .layanan-detail-button {
+        margin-top: 30px;
+        padding: 2rem 5rem;
+        display: inline-block;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        color: white;
+        text-decoration: none;
+        letter-spacing: .6rem;
+        background-color: rgba(85, 85, 85, 0.534);
+    }
+    .layanan_container .layanan-img {
+        height: 40%;
+        width: 100%;
+        margin-bottom: 0.03rem;
+  }
+  
+  
+  
+  .kontak_container{
+    background-color: rgb(224, 224, 224);
+  }
+  
+  .kontak-detail{
+    padding-bottom: 1%
+  }
+  
+  
+  
+  .kontainer{
+    height: 60%;
+    width: 50%;
+    background: url('mulungin/kelly.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+    transition: 0.3s ease-out;
+    float:left;
+  }
+  .kontainer2{
+    height: 60%;
+    width: 50%;
+    overflow: hidden;
+    background: url('mulungin/danial.jpg') no-repeat;
+    background-size: cover;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+    transition: 0.3s ease-out;
+  }
+  .kontainer:hover, .kontainer2:hover{
+    box-shadow: 0px 1px 35px 0px rgba(0,0,0,0.3);
+    transform: translateY(0px);
+  }
+  
+  .kontainer:hover .image, .kontainer2:hover .image{
+    transform: translateY(0px);
+  }
+  .kontainer:hover .image img,.kontainer2:hover .image img{
+    opacity: 0.2;
+  }
+  
+  .kontainer ul,.kontainer2 ul{
+      display: flex;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      list-style: none;
+  }
+  
+  .kontainer ul li,.kontainer2 ul li{
+    margin: 0px 5px;
+  }
+  
+  .kontainer ul li a, .kontainer2 ul li a{
+    display: block;
+    height: 30px;
+    width: 30px;
+    color: #000;
+    line-height: 50px;
+    font-size: 25px;
+    border-radius: 40%;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    float: right;
+  }
+  
+  
+  .kontainer:hover > ul > li > a,
+  .kontainer2:hover > ul > li > a
+  {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .kontainer:hover > ul > li:nth-child(2) a,
+  .kontainer2:hover > ul > li:nth-child(2) a
+  {
+    transition-delay: 0.1s;
+  }
+  .kontainer:hover > ul > li:nth-child(3) a,
+  .kontainer2:hover > ul > li:nth-child(3) a
+  {
+    transition-delay: 0.2s;
+  }
+  .kontainer:hover > ul > li:nth-child(4) a,
+  .kontainer2:hover > ul > li:nth-child(4) a
+  
+  {
+    transition-delay: 0.3s;
+  }
+  .kontainer:hover > ul > li:nth-child(5) a,
+  .kontainer2:hover > ul > li:nth-child(5) a
+  {
+    transition-delay: 0.4s;
+  }
+  .kontainer .kontak_isi, .kontainer2 .kontak_isi{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .info{
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+    color: #000;
+    line-height: 26px;
+  }
+  
+  
+  .info h2{
+    font-size: 27px;
+    margin: 10px 0;
+  }
+  .info span{
+    color: #1a1a1a;
+  }
+  
+  
+  .fa-facebook {
+      color: #3b5998;
+  }
+  .fa-facebook:hover {
+      color: #4f79d0;
+  }
+  .fa-instagram {
+      color: #8a3ab9;
+  }
+  .fa-instagram:hover {
+      color: #ae48eb;
+  }
+  .fa-github {
+      color: #211f1f;
+  }
+  .fa-github:hover {
+      color: #ac9c9c;
+  }
+  .fa-whatsapp {
+      color: #075e54;
+  }
+  .fa-whatsapp:hover {
+      color: #08c950;
+  }
+  
+  
+  .fa-twitter {
+      color: #00acee;
+  }
+  .fa-twitter:hover {
+      color: #00ddee;
+  }
+  

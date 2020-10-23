@@ -1,0 +1,19 @@
+*{
+    pad: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.box{
+    display:block;
+    width: 250px;
+    padding: 10px 2px;
+    border: solid 3px;
+    margin: 10px;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
